@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Smart House</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&family=Montserrat&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8">
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- ------------------info button  ------------------>
+		<div class="allSystemInfo">
+			<div class="allSystemInfoIcon"><span class="iconpsan">Smart</span><img src="icons/info.png" alt=""><span class="iconspan1">House</span>
+			</div>
+		</div>
+		<div class="content">
+			<div class="popap"></div>
+
+
+<!---------------------- ifoblock ------------------>
+
+		<div class="content_info_block">
+			<div class="content_info_block_box">
+				<div id="Alarm" class="res"></div>
+				<div id="Video" class="res"></div>
+				<div id="TV" class="res"></div>
+				<div id="Temperature" class="res"></div>
+				<div id="Garage" class="res"></div>
+				<div id="Lighting" class="res"></div>
+				<div id="Blinds" class="res"></div>
+				<div id="Music" class="res"></div>
+			</div>
+				<div class='back_general_div'>
+					<button id="back_general" class="waves-effect waves-light btn">Back</button>
+				</div>
+		</div>
+<!--------------------- Modal ------------------------>
+				<div id="modal1" class="modal">
+					<div class="modal-content">
+						<form class="col s12" id="loginform">
+						<div class="input-field col s6">
+							<i class="material-icons prefix">account_circle</i>
+							<input name="login" id="last_name" type="text" class="validate">
+							<label for="last_name" data-error="Please enter a value."></label>
+						</div>
+						<div class="input-field col s12">
+							<i class="material-icons prefix">vpn_key</i>
+							<input name="pswd" id="password" type="password" class="validate">
+							<label for="password" data-error="Please enter a value."></label>
+						  </div>
+						  <div class="modal-footer">
+							<button class="btn waves-effect waves-light registration left" type="submit" name="action">Registration
+								<i class="material-icons right">send</i>
+							  </button>
+							<a href="#!" class="modal-close waves-effect waves-light btn agree">Confirm</a>
+							<a href="#!" class="modal-close waves-effect waves-light btn cancel">Cancel</a>
+
+						  </div>
+						  </form>
+					</div>
+				</div>
+
+
+				<div class="content_system">
+
+<!--------------------- Button login ------------------------>
+				<div class="content_login ">
+					<div class="content_login_enter">
+						<a class="modal-trigger" href="#modal1">
+							<img src="icons/9.png" alt="">
+						</a>
+				</div>
+				</div>
+<!----------------------------------------------------------->
+
+					<div class="content_block system8">
+						<div class="content_block_tv_title block_title">TV Control</div>
+						<div class="content_block_tv_logo block_logo">
+							<img src="icons/6.png" alt="">
+						</div>
+					</div>
+					<div class="content_block system1">
+						
+						<div class="content_block_security_title block_title">Alarm system</div>
+						<div class="content_block_security_logo block_logo">
+							<img src="icons/2.png" alt="">
+						</div>
+					</div>
+		
+					<div class="content_block system2">
+						<div class="content_block_cameras_title block_title">Video Security</div>
+						<div class="content_block_cameras_logo block_logo">
+							<img src="icons/3.png" alt="">
+						</div>
+					</div>
+		
+					<div class="content_block system3">
+						<div class="content_block_temperature_title block_title">Temperature</div>
+						<div class="content_block_temperature_logo block_logo">
+							<img src="icons/8.png" alt="">
+						</div>
+					</div>
+		
+					<div class="content_block system4">
+						<div class="content_block_garage_title block_title">Garage</div>
+						<div class="content_block_garage_logo block_logo">
+							<img src="icons/7.png" alt="">
+						</div>
+					</div>
+		
+					<div class="content_block system5">
+						<div class="content_block_light_title block_title">Rooms Lighting</div>
+						<div class="content_block_light_logo block_logo">
+							<img src="icons/1.png" alt="">
+						</div>
+					</div>
+		
+					<div class="content_block system6">
+						<div class="content_block_curtains_title block_title">Blinds Control </div>
+						<div class="content_block_curtains_logo block_logo">
+							<img src="icons/4.png" alt="">
+						</div>
+					</div>
+		
+					<div class="content_block system7">
+						<div class="content_block_music_title block_title">Music Control</div>
+						<div class="content_block_music_logo block_logo">
+							<img src="icons/5.png" alt="">
+						</div>
+					</div>
+		
+				</div>
+				<div class="contant_block_info_system"></div>
+
+				<section id="weather_block">
+				</section>
+				
+			</div>
+			<div class="popapForTv"></div>
+	</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="class/SuperBlock.js"></script>
+	<script src="class/Alarm.js"></script>
+	<script src="class/Video.js"></script>
+	<script src="class/Temperature.js"></script>
+	<script src="class/Garage.js"></script>
+	<script src="class/TV.js"></script>
+	<script src="class/Lighting.js"></script>
+	<script src="class/Blinds.js"></script>
+	<script src="class/Music.js"></script>
+</body>
+
+</html>
