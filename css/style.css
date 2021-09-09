@@ -8,6 +8,7 @@
     background: linear-gradient(#000000a2, #000000a2), url(../fotos/1.jpg);
     background-size: cover;
     min-height: 100vh;
+
 }
 
 
@@ -17,7 +18,9 @@
     object-fit: cover;
 }
 
-.content{}
+.content{
+
+}
 
 
 .content_login{
@@ -570,6 +573,20 @@ audio {
     color: red;
     }
 
+    .modal-footer{
+        display: flex;
+        justify-content: space-between;
+    }
+    .registr_conf{
+        display: flex;
+    }
+    .conf{
+        margin: 0px 20px 0px 0px;
+    }
+    .modal-content{
+       padding: 10px !important; 
+    }
+
 @media (max-width: 500px) {
     .content_block{
       flex: 0 1 auto;
@@ -584,6 +601,16 @@ audio {
     }
     .content_system{
      row-gap: 10px;
+    }
+    .allSystemInfo{
+        margin: 10px 0px 7px 0px;
+    }
+    .modal-footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .modal-content{
+        height: 280px;
     }
 }
 

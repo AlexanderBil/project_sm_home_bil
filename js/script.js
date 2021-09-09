@@ -26,6 +26,7 @@ $("#loginform").validate({
           }
 })
 
+
 //Popup initialization (materialize css)
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.modal');
@@ -42,9 +43,16 @@ document.addEventListener('DOMContentLoaded', function() {
 document.querySelector('.registration').onclick = () => {
   let login = document.getElementById('last_name').value;
   let password = document.getElementById('password').value;
-  localStorage.setItem('login', login);
-  localStorage.setItem('password', password);
+  if(login.length > 3 && password.length > 5){
+    localStorage.setItem('login', login);
+    localStorage.setItem('password', password);
+    document.querySelector('.registration').classList.add('modal-close');
+    document.querySelector('.s12').reset();
+  } else{
+    return false
+  }
 }
+
 
 // Get in Local Storage login and password----------------------------------
 document.querySelector('.agree').onclick = () => {
@@ -52,12 +60,24 @@ document.querySelector('.agree').onclick = () => {
   let password = document.getElementById('password').value;
   if(localStorage.getItem('login') === login && localStorage.getItem('password') === password){
     document.querySelector('.content_login').classList.add('login_open');
+    localStorage.setItem('class', 'login_open');
   }
 }
 //Clearing the registration form by clicking on Cancel
 document.querySelector('.cancel').onclick = () => {
   document.querySelector('.s12').reset();
 }
+
+
+//Check if Local Storage has class login_open if wee already enter(no ask password again)
+$(document).ready(function(){
+  if(localStorage.getItem('class')){
+    $('.content_login').addClass('login_open')
+  }
+})
+// $(window).unload(function(){
+//   localStorage.setItem('class', $('.content_login').hasClass('login_open'))
+// })
 
 
 //To click for item (Tv Control, Alarms System...) show info block
